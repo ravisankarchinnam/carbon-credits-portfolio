@@ -3,12 +3,12 @@
 import React, { useEffect, useState } from "react";
 
 export const AppContent = () => {
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState([]);
 
   useEffect(() => {
-    fetch("/api")
-      .then((response) => response.text())
+    fetch("/api/project")
+      .then((response) => response.json())
       .then(setMessage);
   }, []);
-  return <div>{message}</div>;
+  return <div>{message?.map((project: any) => <p key={project._id}>{project.name}</p>)}</div>;
 };
