@@ -37,8 +37,12 @@ export const PortfolioProvider = ({ children }: PortfolioProviderProps) => {
       setIsLoading(false);
     } catch (error: unknown) {
       setIsLoading(false);
-      const { error: title, message: description } =
-        (error as AxiosError).response?.data ?? globalError;
+      const serverError = (error as AxiosError).response?.data;
+      let { error: title, message: description } = globalError;
+      if (serverError) {
+        title = serverError.error || serverError;
+        description = serverError.message;
+      }
       toast({
         title,
         description,

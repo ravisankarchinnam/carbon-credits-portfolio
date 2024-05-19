@@ -1,7 +1,7 @@
 {
   "name": "api",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.1.0",
+  "description": "This project provides an api to generate portfolio for the requested volume(tons) with a variety of carbon credits for customers.",
   "author": "",
   "private": true,
   "license": "UNLICENSED",

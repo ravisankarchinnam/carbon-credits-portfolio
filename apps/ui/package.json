@@ -1,6 +1,7 @@
 {
   "name": "ui",
   "version": "0.1.0",
+  "description": "Interface to generate a portfolio for the requested volume(tons) with a variety of carbon credits for customers.",
   "private": true,
   "scripts": {
     "dev": "next dev",

@@ -1,73 +1,87 @@
+# Carbon Credits Portfolio - API
+
+> This project provides an api to generate portfolio for the requested volume(tons) with a variety of carbon credits for customers.
+
+> It's implemented using Typescript, Nest.js, Node.js, Swagger, and uses mongo db for database and configured using turbo.
+
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+    <a href="https://merry-enthusiasm-production.up.railway.app" target="blank">API Demo</a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<p align="center"><img src="../../screenshots/api.png" alt="carbon-credits-portfolio-api" /></p>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Technologies
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- [Nest.js v10.0.0](https://nestjs.com/)
+- [Nest Mongoose](https://www.npmjs.com/package/@nestjs/mongoose)
+- [Swagger Documentation](https://www.npmjs.com/package/@nestjs/swagger)
+- [Typescript v5](https://www.typescriptlang.org/)
+- [Node.js v18.20.2](https://nodejs.org/)
 
-## Installation
+## Installation Steps
+
+> > This project configured using turbo for build and development and you don't need to run these below steps unless you want to start separately. Please before run the app, make sure to install the following software in your system locally.
+
+ - [Turbo](https://turbo.build/) install globally - Turbo is an incremental bundler and build system optimized for JavaScript and TypeScript, written in Rust.
+ - [Node.js v18]((https://nodejs.org/))
+ - [Mongodb](https://www.mongodb.com/try/download/community) or MongoDB connection string.
+
+1. Clone the repository
 
 ```bash
-$ npm install
+git clone https://github.com/ravisankarchinnam/carbon-credits-portfolio.git
 ```
 
-## Running the app
+2. Change the working directory
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+cd apps/api
 ```
 
-## Test
+3. Install dependencies
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+npm ci
 ```
 
-## Support
+4. Create `.env` file in root and add your variables
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+```bash
+MONGODB_URI=YOUR_MONGODB_URI #http://localhost:27017/ceezer
+MONGODB_URI_TEST=YOUR_MONGODB_URI_FOR_TEST #mongodb://localhost:27017/test_ceezer
+API_PORT=4000
+```
 
-## Stay in touch
+1. start the app
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+```bash
+npm run dev
+```
 
-## License
+> You are all set! Open [localhost:4000/documentation](http://localhost:4000/documentation) to see the app.
 
-Nest is [MIT licensed](LICENSE).
+> `npm run build` - which generates a dist folder with all the files ready for the prod deployment in the same `api` folder.
+
+### Tests
+This project contains tests as part of the development. Run the following command to run the tests locally.
+
+```bash
+cd apps/api
+npm run test
+npm run test:e2e
+```
+
+### Enhancements
+
+1. Configure Indexing and setup Caching mechanism
+2. Introduce advanced filtering for the search
+3. Implement user creation to save search history
+4. Implement Role based authentication for creating projects
+5. Implement Cursor pagination for the search in case of huge datasets
+6. Implement CRUD Operations for Projects
+7.  Potential to convert to micro services as the project grows
+
+## Author
+
+> Ravisankar Chinnam
