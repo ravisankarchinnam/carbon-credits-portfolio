@@ -11,8 +11,7 @@ export class ProjectService {
   ) {}
 
   async create(createProjectDto: CreateProjectDto): Promise<Project> {
-    const createdProject = new this.projectModel(createProjectDto);
-    return createdProject.save();
+    return this.projectModel.create(createProjectDto);
   }
 
   async findAll(): Promise<Project[]> {

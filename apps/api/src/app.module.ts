@@ -6,16 +6,24 @@ import {
   RequestMethod,
 } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { DatabaseModule } from './database/mongoose.module';
+import { DatabaseModule } from './database/database.module';
 import {
   HttpExceptionFilter,
   RequestLoggerMiddleware,
   ResponseLoggerInterceptor,
 } from './common';
 import { ProjectModule } from './api/projects/project.module';
+import { PortfolioModule } from './api/portfolio/portfolio.module';
 
 @Module({
-  imports: [ConfigModule.forRoot(), DatabaseModule, ProjectModule],
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+    DatabaseModule,
+    ProjectModule,
+    PortfolioModule,
+  ],
   controllers: [],
   providers: [
     {

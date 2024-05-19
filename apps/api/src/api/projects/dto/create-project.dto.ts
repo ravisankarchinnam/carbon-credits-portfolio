@@ -36,7 +36,7 @@ export class CreateProjectDto {
   @IsNotEmpty()
   @IsDateString()
   @ApiProperty()
-  earliest_delivery: Date;
+  earliest_delivery: string;
 
   @IsNotEmpty()
   @ApiProperty()
