@@ -1,6 +1,6 @@
-import { AppContent } from "@/components/AppContent";
+import { AppContent } from '@/components/AppContent';
 
-export default function Home() {
+export default function Portfolio() {
   return (
     <main>
       <AppContent />

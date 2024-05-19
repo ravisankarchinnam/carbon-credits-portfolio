@@ -1,13 +1,16 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Providers } from "./providers";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import { Providers } from './providers';
+import { Layout } from '@/components/global/Layout';
+import { metaDataLabels } from '@/constants';
 
-const inter = Inter({ subsets: ["latin"] });
+const { title, description } = metaDataLabels;
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Carbon Credits Portfolio",
-  description:
-    "Generates Portfolio with a variety of carbon credits for customers",
+  title,
+  description,
 };
 
 export default function RootLayout({
@@ -18,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Layout>{children}</Layout>
+        </Providers>
       </body>
     </html>
   );
