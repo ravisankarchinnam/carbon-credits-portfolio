@@ -12,9 +12,10 @@ import {
   RequestLoggerMiddleware,
   ResponseLoggerInterceptor,
 } from './common';
+import { ProjectModule } from './api/projects/project.module';
 
 @Module({
-  imports: [ConfigModule.forRoot(), DatabaseModule],
+  imports: [ConfigModule.forRoot(), DatabaseModule, ProjectModule],
   controllers: [],
   providers: [
     {
