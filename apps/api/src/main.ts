@@ -3,9 +3,12 @@ import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import * as pkg from '../package.json';
+import { ConfigService } from '@nestjs/config';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  const configService = app.get(ConfigService);
+
   app.setGlobalPrefix('api');
 
   app.useGlobalPipes(
@@ -20,7 +23,7 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('documentation', app, document);
 
-  await app.listen(Number(process.env.API_PORT) || 4000);
+  await app.listen(configService.get('API_PORT') || 4000);
   console.log(`Application is running on: ${await app.getUrl()}`);
 }
 bootstrap();
