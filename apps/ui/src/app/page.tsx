@@ -1,10 +1,5 @@
-import styles from "./page.module.css";
-import { AppContent } from "@/components/AppContent";
+import PortfolioContent from '@/components/views/PortfolioContent';
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <AppContent />  
-    </main>
-  );
+export default function Portfolio() {
+  return <PortfolioContent />;
 }

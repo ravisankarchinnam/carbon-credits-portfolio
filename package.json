@@ -1,6 +1,6 @@
 {
   "name": "carbon-credits-portfolio",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "This project generates a portfolio with a variety of carbon credits for customers",
   "scripts": {
     "dev": "turbo run dev",
@@ -20,6 +20,7 @@
     "next",
     "turbo-repo",
     "mongodb",
-    "full-stack"
+    "full-stack",
+    "chakra-ui"
   ]
 }
