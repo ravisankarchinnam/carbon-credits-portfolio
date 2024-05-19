@@ -20,6 +20,7 @@
     "next",
     "turbo-repo",
     "mongodb",
-    "full-stack"
+    "full-stack",
+    "chakra-ui"
   ]
 }
