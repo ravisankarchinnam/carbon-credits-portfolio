@@ -1,0 +1,25 @@
+{
+  "name": "carbon-credits-portfolio",
+  "version": "1.0.0",
+  "description": "This project generates a portfolio with a variety of carbon credits for customers",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "devDependencies": {
+    "turbo": "^1.13.3"
+  },
+  "author": "Ravisankar Chinnam",
+  "license": "ISC",
+  "keywords": [
+    "nest",
+    "next",
+    "turbo-repo",
+    "mongodb",
+    "full-stack"
+  ]
+}
