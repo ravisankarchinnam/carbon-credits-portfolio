@@ -89,7 +89,7 @@ e. p5 = 27t
 git clone https://github.com/ravisankarchinnam/carbon-credits-portfolio.git
 ```
 
-2. Create a .env file for both the [apps/api](/apps/api) and [apps/ui](/apps/ui) add the following environment variables
+2. Create a .env file using .env.example for both the [apps/api](/apps/api) and [apps/ui](/apps/ui) add the following environment variables
 
 - [apps/ui](/apps/ui)
     ```bash

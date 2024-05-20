@@ -38,7 +38,7 @@ git clone https://github.com/ravisankarchinnam/carbon-credits-portfolio.git
 cd apps/ui
 ```
 
-3. Create `.env` file and add your variables
+3. Create `.env` file using .env.example and add your variables
 
 ```bash
 NEXT_PUBLIC_APP_API_URL=[YOUR_API_BASE_URL] #http://localhost:4000/api
