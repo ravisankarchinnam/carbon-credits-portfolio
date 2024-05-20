@@ -50,7 +50,7 @@ API_PORT=[YOUR_PORT] #4000
 4. Install dependencies
 
 ```bash
-npm ci
+npm install
 ```
 
 5. start the app
