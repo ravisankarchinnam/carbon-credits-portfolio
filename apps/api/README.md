@@ -39,7 +39,7 @@ git clone https://github.com/ravisankarchinnam/carbon-credits-portfolio.git
 cd apps/api
 ```
 
-3. Create `.env` file in root and add your variables
+1. Create `.env` file using .env.example and add your variables
 
 ```bash
 MONGODB_URI=[YOUR_MONGODB_URI] #http://localhost:27017/ceezer
