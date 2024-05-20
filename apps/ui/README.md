@@ -5,7 +5,7 @@
 > It's implemented using Typescript, React.js, Next.js, Chakra UI Library and React Context API for state management as it is very trivial application and configured using turbo.
 
 <p align="center">
-    <a href="https://app/" target="blank">UI Demo</a>
+    <a href="https://carbon-credits-portfolio-production.up.railway.app" target="blank">UI Demo</a>
 </p>
 
 <p align="center"><img src="../../screenshots/ui-form.png" alt="carbon-credits-portfolio-ui-form" /></p>
@@ -47,7 +47,7 @@ NEXT_PUBLIC_APP_API_URL=[YOUR_API_BASE_URL] #http://localhost:4000/api
 4. Install dependencies
 
 ```bash
-npm ci
+npm install
 ```
 
 5. Run the app

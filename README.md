@@ -12,11 +12,6 @@ This is a full stack responsive application which generates a portfolio for the 
 
 <p align="center"><img src="screenshots/ui-table.png" alt="carbon-credits-portfolio-ui-table" /></p>
 
-
-<p align="center">
-    <a href="https://merry-enthusiasm-production.up.railway.app" target="blank">API Demo</a>
-</p>
-
 <p align="center"><img src="screenshots/api.png" alt="carbon-credits-portfolio-api" /></p>
 
 

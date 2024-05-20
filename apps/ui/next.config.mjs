@@ -2,14 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   async rewrites() {
-    return process.env.NODE_ENV !== 'production'
-      ? [
+    return [
           {
             source: '/api/:path*',
             destination: `${process.env.NEXT_PUBLIC_APP_API_URL}/:path*`, // Proxy to Backend
           },
-        ]
-      : [];
+        ];
   },
 };
 
