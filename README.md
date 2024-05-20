@@ -89,15 +89,31 @@ e. p5 = 27t
 git clone https://github.com/ravisankarchinnam/carbon-credits-portfolio.git
 ```
 
-2. Installing dependencies
-> Navigate to the root folder of the project directory and run the following command to install dependencies for both [api](/apps/api) and [ui](/apps/ui).
+2. Create a .env file for both the [apps/api](/apps/api) and [apps/ui](/apps/ui) add the following environment variables
+
+- [apps/ui](/apps/ui)
+    ```bash
+    #### API URL ENV VARS ###
+    NEXT_PUBLIC_APP_API_URL=[YOUR_API_URL] #http://localhost:4000/api
+
+    ```
+
+- [apps/api](/apps/api)
+    ```bash
+    MONGODB_URI=[YOUR_MONGODB_URI] #http://localhost:27017/ceezer
+    MONGODB_URI_TEST=[YOUR_MONGODB_URI_FOR_TEST] #mongodb://localhost:27017/test_ceezer
+    API_PORT=[YOUR_PORT] #4000
+    ```
+
+3. Installing dependencies
+> Navigate to the root folder of the project directory and run the following command to install dependencies for both [apps/api](/apps/api) and [/apps/ui](/apps/ui).
 
 ```bash
 npm ci
 ```
 
-3. Running the application locally
-> Run the following command to start both the [api](/apps/api) and [ui](/apps/ui).
+4. Running the application locally
+> Run the following command in your root directory to start both the [apps/api](/apps/api) and [apps/ui](/apps/ui) in development mode.
 ```bash
 npm run dev
 ```
@@ -105,14 +121,14 @@ npm run dev
 ## Building the application
 
 1. Installing dependencies
-> Navigate to the root folder of the project directory and run the following command to build both [api](/apps/api) and [ui](/apps/ui).
+> Navigate to the root folder of the project directory and run the following command to build both [apps/api](/apps/api) and [apps/ui](/apps/ui).
 
 ```bash
 npm run build
 ```
 
 2. Running the application for production
-> Run the following command to start both the [api](/apps/api) and [ui](/apps/ui).
+> Run the following command to start both the [apps/api](/apps/api) and [apps/ui](/apps/ui).
 ```bash
 npm run start
 ```

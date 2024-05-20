@@ -38,16 +38,16 @@ git clone https://github.com/ravisankarchinnam/carbon-credits-portfolio.git
 cd apps/ui
 ```
 
-3. Install dependencies
+3. Create `.env` file and add your variables
+
+```bash
+NEXT_PUBLIC_APP_API_URL=[YOUR_API_BASE_URL] #http://localhost:4000/api
+```
+
+4. Install dependencies
 
 ```bash
 npm ci
-```
-
-4. Create `.env` file in root and add your variables
-
-```bash
-NEXT_PUBLIC_APP_API_URL=YOUR_API_BASE_URL #http://localhost:4000
 ```
 
 5. Run the app

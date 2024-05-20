@@ -6,7 +6,7 @@ const nextConfig = {
       ? [
           {
             source: '/api/:path*',
-            destination: `${process.env.NEXT_PUBLIC_APP_API_URL}/api/:path*`, // Proxy to Backend
+            destination: `${process.env.NEXT_PUBLIC_APP_API_URL}/:path*`, // Proxy to Backend
           },
         ]
       : [];

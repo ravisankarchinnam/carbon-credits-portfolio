@@ -39,21 +39,21 @@ git clone https://github.com/ravisankarchinnam/carbon-credits-portfolio.git
 cd apps/api
 ```
 
-3. Install dependencies
+3. Create `.env` file in root and add your variables
+
+```bash
+MONGODB_URI=[YOUR_MONGODB_URI] #http://localhost:27017/ceezer
+MONGODB_URI_TEST=[YOUR_MONGODB_URI_FOR_TEST] #mongodb://localhost:27017/test_ceezer
+API_PORT=[YOUR_PORT] #4000
+```
+
+4. Install dependencies
 
 ```bash
 npm ci
 ```
 
-4. Create `.env` file in root and add your variables
-
-```bash
-MONGODB_URI=YOUR_MONGODB_URI #http://localhost:27017/ceezer
-MONGODB_URI_TEST=YOUR_MONGODB_URI_FOR_TEST #mongodb://localhost:27017/test_ceezer
-API_PORT=4000
-```
-
-1. start the app
+5. start the app
 
 ```bash
 npm run dev
