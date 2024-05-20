@@ -99,7 +99,7 @@ export default function PortfolioTable({
                       {supplier_name}
                     </Td>
                     <Td px={1} pb={0}>
-                      {distribution_weight}%
+                      {distribution_weight * 100}%
                     </Td>
                     <Td px={1} pb={0}>
                       {formatPrice(price_per_ton)}
