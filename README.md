@@ -1,8 +1,8 @@
 # Carbon Credits Portfolio
 
-This is a full stack responsive application which generates a portfolio for the requested volume(tons) with a variety of carbon credits for customers.
+This is a full-stack responsive application that generates a portfolio for the requested volume(tons) with a variety of carbon credits for customers.
 
-> It's a monorepo implemented using Typescript, Nest.js, Node.js, Next.js, React.js, and Chakra UI Library as well as React Context API for state management as it is very trivial application, it uses mongo db for database and configured using turbo.
+> It's a monorepo implemented using Typescript, Nest.js, Node.js, Next.js, React.js, and Chakra UI Library as well as React Context API for state management as it is a very trivial application, it uses mongo db for database and is configured using turbo.
 
 <p align="center">
     <a href="https://carbon-credits-portfolio-production.up.railway.app" target="blank">UI Demo</a>
@@ -17,13 +17,13 @@ This is a full stack responsive application which generates a portfolio for the 
 
 ## Application
 
-This monorepo includes the both api (backend) and ui (frontend) projects under the apps folder.
+This monorepo includes both api (backend) and ui (frontend) projects under the apps folder.
 [api - NestJS app](/app/api)
 [ui - Next.js app](/apps/ui)
 
 ## Features
 
-User can input the desired volume in tons of carbon credits. Once submitted, the page will generate and display a recommended portfolio with the following principles:
+Users can input the desired volume in tons of carbon credits. Once submitted, the page will generate and display a recommended portfolio with the following principles:
 
 #### Principles
 1. The portfolio should aim to use the maximum amount of tons while respecting the distribution weight.
@@ -44,6 +44,17 @@ b. p2 = 6t
 c. p3 = 9t
 d. p4 = 15t
 e. p5 = 27t
+
+> [!IMPORTANT]  
+> The portfolio's tonnage should not exceed the distribution weight to the total distribution weight(consider it always sums up to 100%) of all projects while respecting the allowed volume for each project.
+> 
+> If the customer requests 600 tons, considering the above-mentioned distribution weights, the tonnage should be as follows
+> - p1 = 15
+> - p2 = 30
+> - p3 = 45
+> - p4 = 75
+> - p5 = 135
+>
 
 ## Technologies
 
@@ -70,11 +81,14 @@ e. p5 = 27t
 > Check out the readme for the sub folders [ui](/apps/ui/README.md) and [api](/apps/api/README.md) respectively.
 
 #### Prerequisites
-> This project configured using turbo for build and development. Please before run the app, make sure to install the following software in your system locally.
+> This project is configured using turbo for build and development. Please before running the app, make sure to install the following software in your system locally.
 
  - [Turbo](https://turbo.build/) install globally - Turbo is an incremental bundler and build system optimized for JavaScript and TypeScript, written in Rust.
  - [Node.js v18]((https://nodejs.org/))
  - [Mongodb](https://www.mongodb.com/try/download/community) or MongoDB connection string.
+
+> [!CAUTION]
+> Once the database is installed locally, insert the data into DB from the [CSV file](projects_sample.csv).
 
 #### Setup
 
@@ -130,7 +144,7 @@ npm run start
 
 ## Deployment
 
-> This App is deployed to railway.app, please use this link to access the site [https://carbon-credits-portfolio-production.up.railway.app](https://carbon-credits-portfolio-production.up.railway.app)
+> This App is deployed to the railway.app, please use this link to access the site [https://carbon-credits-portfolio-production.up.railway.app](https://carbon-credits-portfolio-production.up.railway.app)
 
 ### Tests
 This project contains api tests as part of the development. Run the following commands to run the tests locally.
@@ -145,35 +159,35 @@ npm run test:e2e
 
 #### Frontend
 
-1. Interface to project detail page
+1. Interface to the project detail page
 2. Virtualized lists rendering large data table
 3. Interface to Login/Register
 4. Interface to CRUD Projects
 5. Implement validation for project creation for distribution weight percentage
-6. Dynamic forms creation by json
+6. Dynamic forms creation by JSON
 7. Implement Custom UI Library (Storybook)
 8. Implement Favorites/Wishlist for projects
 9.  Add Error pages
 10. Lazy loading for images
 11. Configure Redux/React-query as the project grows
 12. Write frontend tests
-13. Configure pre commit hooks(husky)
+13. Configure pre-commit hooks(husky)
 14. I18N for multiple languages
 
 
 #### Backend
 
-1. Configure Indexing and setup Caching mechanism
+1. Configure Indexing and set Caching mechanism
 2. Introduce advanced filtering for the search
 3. Implement user creation to save search history
 4. Implement Role based authentication for creating projects
 5. Implement Cursor pagination for the search in case of huge datasets
 6. Implement CRUD Operations for Projects
-7.  Potential to convert to micro services as the project grows
+7.  Potential to convert to microservices as the project grows
 
 ## Version
 
-1.0.0
+0.1.0
 
 ## Author
 
