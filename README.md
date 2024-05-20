@@ -137,6 +137,14 @@ npm run start
 
 > This App is deployed to railway.app, please use this link to access the site [https://carbon-credits-portfolio-production.up.railway.app](https://carbon-credits-portfolio-production.up.railway.app)
 
+### Tests
+This project contains api tests as part of the development. Run the following commands to run the tests locally.
+
+```bash
+cd apps/api
+npm run test
+npm run test:e2e
+```
 
 ### Improvements
 
