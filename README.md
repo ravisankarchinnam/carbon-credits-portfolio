@@ -1,6 +1,6 @@
 # Carbon Credits Portfolio
 
-This is a full stack application which generates a portfolio for the requested volume(tons) with a variety of carbon credits for customers.
+This is a full stack responsive application which generates a portfolio for the requested volume(tons) with a variety of carbon credits for customers.
 
 > It's a monorepo implemented using Typescript, Nest.js, Node.js, Next.js, React.js, and Chakra UI Library as well as React Context API for state management as it is very trivial application, it uses mongo db for database and configured using turbo.
 
